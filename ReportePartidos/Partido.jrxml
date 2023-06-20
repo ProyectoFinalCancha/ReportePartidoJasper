@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Partido" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="cbaa5b31-3ab1-4457-af1d-4c616b254ad0">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="LocalCanchaApp"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<parameter name="PartidoLogo" class="java.awt.Image">
+		<defaultValueExpression><![CDATA[$P{PartidoLogo}]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="dia" class="java.time.LocalDate"/>
+	<field name="precio" class="java.awt.geom.Arc2D$Double"/>
+	<field name="numeroCancha" class="domainapp.modules.simple.dom.partido.types.NumeroCancha"/>
+	<field name="representante" class="java.lang.Class"/>
+	<field name="horarios" class="domainapp.modules.simple.dom.partido.types.Horarios"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="152" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="30" width="230" height="30" forecolor="#FFFFFF" backcolor="#6D9150" uuid="3d40f4b9-e862-4e67-8e41-79bda6348cf9"/>
+				<textElement textAlignment="Center">
+					<font fontName="Segoe UI Semibold" size="22" isUnderline="false"/>
+					<paragraph lineSpacing="1_1_2" lineSpacingSize="1.0"/>
+				</textElement>
+				<text><![CDATA[Partido]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="140" y="0" width="90" height="19" forecolor="#3B7330" backcolor="#416485" uuid="c9551915-6b35-4076-afe4-0605371cae38"/>
+				<textElement markup="none">
+					<font size="12" isBold="true" isItalic="false" isUnderline="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[CANCHA UP!]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="90" width="50" height="20" uuid="e057efe2-ec78-490e-b3c9-932af52a5dd2"/>
+				<textElement>
+					<font isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Fecha: ]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="50" y="90" width="100" height="20" uuid="e7a162a9-96a1-4caf-b84f-d57827071f60"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm">
+				<reportElement x="50" y="115" width="100" height="20" uuid="d74b84f7-8cce-4f45-acf9-e40b9301a153"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="60" width="100" height="24" uuid="29cbad99-7041-4d7b-91c1-cb419e738b75"/>
+				<textElement>
+					<font isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Reporte]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="115" width="50" height="20" uuid="8482ee98-b8ac-4634-a124-efc5463d975b"/>
+				<textElement>
+					<font isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Hora:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="140" width="220" height="1" forecolor="rgba(0, 0, 0, 0.0)" uuid="87fb5e3f-e179-4953-a8fc-ad4cb939f150"/>
+				<graphicElement>
+					<pen lineWidth="2.0" lineStyle="Solid" lineColor="#466325"/>
+				</graphicElement>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="193" splitType="Stretch">
+			<textField>
+				<reportElement x="60" y="0" width="100" height="30" uuid="43cff993-1b85-4b1f-b094-d2061ef4146b"/>
+				<textFieldExpression><![CDATA[$F{dia}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="10" y="0" width="50" height="30" uuid="b97e2d36-5784-46f0-8235-4ba8318090f1"/>
+				<textElement>
+					<font fontName="Cambria" size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Día : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="70" y="30" width="100" height="30" uuid="42e11293-65e1-4ece-84e1-d9c7b57ad1dd"/>
+				<textFieldExpression><![CDATA[$F{horarios}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="10" y="30" width="60" height="30" uuid="26a8246b-7cbf-470b-ab56-2533b7cb1d76"/>
+				<textElement>
+					<font fontName="Cambria" size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Horarios : 
+]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="110" y="60" width="100" height="30" uuid="5af5b99d-83a6-4440-bdf1-07ae4ba32900"/>
+				<textFieldExpression><![CDATA[$F{numeroCancha}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="10" y="60" width="100" height="30" uuid="e01ae7f7-fa5c-4219-ae62-2fbc04b610d9"/>
+				<textElement>
+					<font fontName="Cambria" size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[NumeroCancha :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="110" y="90" width="100" height="30" uuid="a6bec89a-2f70-4e49-bd9b-4e7b5b2b080d"/>
+				<textFieldExpression><![CDATA[$F{representante}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="10" y="90" width="100" height="30" uuid="13ffb6c0-64da-400a-be03-31d0ef1f870e"/>
+				<textElement>
+					<font fontName="Cambria" size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Representante : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="80" y="120" width="100" height="30" uuid="2d556661-d0e8-411c-b405-323a299fe02f"/>
+				<textFieldExpression><![CDATA[$F{precio}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="10" y="120" width="70" height="30" uuid="49ea1569-e953-4900-bc96-1424a32fcac5"/>
+				<textElement>
+					<font fontName="Cambria" size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Precio :]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
